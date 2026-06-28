@@ -1,75 +1,30 @@
-# React + TypeScript + Vite
+# Travel Insurance Inquiry & Claim Chat App (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Vercel Deployment](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat-square&logo=vercel)](https://vercel.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![Node Version](https://img.shields.io/badge/Node.js-v18%2B-green?style=flat-square&logo=node.js)](https://nodejs.org/)
+[![Framework](https://img.shields.io/badge/Framework-Next.js%20%2F%20React-blue?style=flat-square&logo=next.js)](https://nextjs.org/)
 
-Currently, two official plugins are available:
+This repository contains the user interface for the **Travel Insurance Inquiry & Claim Chat Application**. Built as a modern, accessible web application, it provides customers with an interactive chat interface to query insurance coverage boundaries and seamlessly file claims via an intelligent AI assistant.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Backend Repo:** https://github.com/vincent168e/travel-insurance-rag-chat-backend
 
-## React Compiler
+The application is fully optimized for speed, utilizes streaming technologies to minimize perceived latency, and is deployed via **Vercel**.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Core Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Real-Time Token Streaming:** Implements native handling for Server-Sent Events (SSE - real-time token streaming) to render the AI assistant's responses word-by-word, mimicking a desktop typing experience.
+- **Dynamic Claim Capture UI:** Renders rich interactive UI widgets or form fields directly inside the chat layout when the backend agent requests structured claim details.
+- **Mobile-First Responsive Design:** Fully adaptive layouts designed to run flawlessly on mobile browsers for travelers needing to file claims directly from an airport or transit hub.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tech Stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+- **Framework:** Next.js (App Router) / React 18+
+- **Language:** TypeScript
+- **Styling & UI:** Tailwind CSS & Radix UI / Shadcn UI components
+- **Icons:** Lucide React
+- **Streaming Client:** Native Fetch API / `@microsoft/fetch-event-source` (for reliable header pass-through during streaming connections)
