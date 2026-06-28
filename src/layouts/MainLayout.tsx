@@ -33,7 +33,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
           className="bg-bluecross-accent hover:brightness-110 active:scale-95 text-slate-900 px-3.5 py-1.5 rounded-full text-sm font-bold flex items-center gap-1.5 transition-all shadow-md focus:outline-none focus:ring-2 focus:ring-white cursor-pointer"
         >
           <HelpCircle size={14} className="stroke-[2.5]" />
-          <span>Help</span>
+          <span>Guide</span>
         </button>
       </header>
       {/* Primary Workspace Panel */}

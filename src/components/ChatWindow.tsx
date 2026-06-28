@@ -18,7 +18,13 @@ export const ChatWindow: React.FC = () => {
         {
           id: "welcome",
           sender: "agent",
-          text: "Hello! I am your Cobalt Cross travel insurance assistant. How can I help you today?",
+          text: "Hello! I am your travel insurance assistant. How can I help you today?",
+          timestamp: new Date(),
+        },
+        {
+          id: "guide",
+          sender: "agent",
+          text: 'Please click "Guide" to know how to use this chat.',
           timestamp: new Date(),
         },
       ],
@@ -126,7 +132,7 @@ export const ChatWindow: React.FC = () => {
         {
           id: "welcome",
           sender: "agent",
-          text: "Hello! I am your Cobalt Cross travel insurance assistant. How can I help you today?",
+          text: 'Hello! I am your travel insurance assistant. How can I help you today? (Please click "Guide" to know how to use this chat.)',
           timestamp: new Date(),
         },
       ],
